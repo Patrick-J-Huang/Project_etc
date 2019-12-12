@@ -163,7 +163,9 @@ public class testGame4 {
     public void Specialize()
     {
         position = "Specialize";
-        mainTextArea.setText("The world is a dangerous place, especially when you’re looking to defeat the evil demon. You have decided that the best way to combat the evil demon is to prepare more and learn the best you can of a class. Which of the following classes to you wish to specialize?”");
+        mainTextArea.setText("The world is a dangerous place, especially when you’re looking to defeat the evil demon. " +
+                "You have decided that the best way to combat the evil demon is to prepare more and learn the best you can of a class. " +
+                " Which of the following classes to you wish to specialize?”");
         choice1.setText("Warrior");
         choice2.setText("Mage");
         choice3.setText("Ranger");
@@ -173,6 +175,7 @@ public class testGame4 {
 
     public void Warrior()
     {
+        warrior player1;
         position = "Warrior";
         mainTextArea.setText("After spending quite a long time to master the melee arts of your chosen class you have finally\n"+ " decided that you already to head out. Which path do you choose?");
         choice1.setText("Take the Merchant Road");
@@ -184,6 +187,7 @@ public class testGame4 {
     public void Mage()
     {
         position = "Mage";
+        mage player2;
         mainTextArea.setText("After spending quite a long time to master the magic arts of your chosen class you have finally\n"+ " decided that you already to head out. Which path do you choose?");
         choice1.setText("Take the Merchant Road");
         choice2.setText("Take the Unforeseen Forest");
@@ -194,6 +198,7 @@ public class testGame4 {
     public void Ranger()
     {
         position = "Ranger";
+        Ranger player3;
         mainTextArea.setText("After spending quite a long time to master the ranged arts of your chosen class you have finally\n"+ " decided that you already to head out. Which path do you choose?");
         choice1.setText("Take the Merchant Road");
         choice2.setText("Take the Unforeseen Forest");
@@ -213,11 +218,12 @@ public class testGame4 {
     }
     public void Scene3()
     {
+
         position = "Scene 3";
         mainTextArea.setText("You are armed, trained, and ready for your adventure!\n"+" You are traveling through the Merchant Road. While traveling, you have reached the crossroad.\n"+" All other three paths are blocked by trees and what seem to be the remains of a recently\n"+ " raid stagecoach. A gang of 3 bandits appeared. Do you:");
         choice1.setText("Keep traveling on the Merchant Road");
         choice2.setText("Visit a nearby town to rest ");
-        choice3.setText("   ");
+        choice3.setText(" Attack  ");
         choice4.setText("   ");
 
     }
@@ -225,10 +231,11 @@ public class testGame4 {
     public void Scene4()
     {
         position = "Scene 4";
+
         mainTextArea.setText("You bravely venture through the Unforeseen Forest. As you navigate through the thick and mystic forest, you have discovered a giant footprint belonging to the legendary Forest Guardian, a giant grizzly bear. As a newly trained adventurer you start to feel unease at the site of what remains to be the Forest Guardian's hunting ground. The sun eventually falls and you have decided to make a camp to rest for a night. While preparing to bed, you hear a loud noise from shadows. Your worst fears have became true. The Forest Guardian appears before you. The Forest Guardian shows its beastly teeth and claws,read to make a meal out of a wandering adventurer. You decide to");
         choice1.setText("Continue traveling through the forest");
         choice2.setText("You get out of the forest and visit a nearby Holiday Inn");
-        choice3.setText("   ");
+        choice3.setText(" Attack  ");
         choice4.setText("   ");
 
     }
@@ -239,7 +246,7 @@ public class testGame4 {
         mainTextArea.setText("You decided to take the most dangerous and possibly the quickest shortcut to the demon king’s \n"+ "layer, the Whispering Cave. \n"+ "The Whispering Cave is known as the home to monstrous creatures that are now serving the demon king. No one dares to venture there unless well-prepared, let alone going there alone. \n"+ "Being the fool that you are, you march through the cave.\n"+ " Minutes after you entered the cave, you are lost. The next thing you know you are surrounded by a murderous pack of goblins. You manage to make it to the other end of the cave. When you exit the cave you see two paths. One to the Unforeseen Forest and the other to the Inn. You");
         choice1.setText("Go to the Holiday Inn");
         choice2.setText("Get out of the forest and visit a nearby Holiday Inn");
-        choice3.setText("    ");
+        choice3.setText(" Attack  ");
         choice4.setText("   ");
     }
     public void Scene6()
@@ -257,8 +264,8 @@ public class testGame4 {
     {
         position = "Scene 7";
         mainTextArea.setText("As you travelled down the Merchant Road, You came across a group of orcs attacking a lady in the hood. Do you");
-        choice1.setText("FINAL");
-        choice2.setText("    ");
+        choice1.setText(" ignore");
+        choice2.setText("  Attack  ");
         choice3.setText("    ");
         choice4.setText("   ");
     }
@@ -306,8 +313,8 @@ public class testGame4 {
     {
         position = "Scene 12";
         mainTextArea.setText("You realize that you have stumbled onto the Unforeseen Forest. Suddenly the Forest Guardian\n"+ " appears before you. The Guardian looks mighty hungry. Do you");
-        choice1.setText("FINAL");
-        choice2.setText("");
+        choice1.setText("flee and confront the final boss");
+        choice2.setText(" Attack");
         choice3.setText("    ");
         choice4.setText("   ");
     }
@@ -336,10 +343,62 @@ public class testGame4 {
     {
         position = "Scene Final";
         mainTextArea.setText("This is the moment you have been waiting for. The Demon King’s Palace stands tall and menacing before you. You enter the Palace. You notice that the Palace is empty.\n"+ " You then enter the throne room. \n"+ "Sitting on the throne is a humongous creature with terrifying spikes and bat-liked wings. \n"+ "The creature stands, screeches, and looks at you. The Demon King has awakened from his slumber. The Demon king Knows why you are here. The Demon King prepares to claim your remains after your defeat. You take your stance and prepare to fight the greatest battle of all time");
-        choice1.setText(" ");
+        choice1.setText("  TO BE CONTINUE");
         choice2.setText(" ");
         choice3.setText("    ");
         choice4.setText("   ");
+    }
+public void enemy1_die()
+{
+    position = "enemy1 defeated";
+    mainTextArea.setText("You have defeated the enemy!");
+    choice1.setText(" Keep traveling on the Merchant Road");
+    choice2.setText(" Visit a nearby town to rest ");
+    choice3.setText(" ");
+    choice4.setText("    ");
+
+}
+    public void enemy2_die()
+    {
+        position = "enemy2 defeated";
+        mainTextArea.setText("You have defeated the enemy!");
+        choice1.setText("Continue traveling through the forest");
+        choice2.setText("You get out of the forest and visit a nearby Holiday Inn");
+        choice3.setText(" ");
+        choice4.setText("    ");
+
+    }
+    public void enemy3_die()
+    {
+        position = "enemy3 defeated";
+        mainTextArea.setText("You have defeated the enemy!");
+        choice1.setText("Go to the Holiday Inn");
+        choice2.setText("Get out of the forest and visit a nearby Holiday Inn");
+        choice3.setText(" ");
+        choice4.setText("    ");
+
+    }
+
+    public void enemy4_die()
+    {
+        position = "enemy4 defeated";
+        mainTextArea.setText("You have defeated the enemy!");
+        choice1.setText("Final- Bosss fight");
+        choice2.setText("  ");
+        choice3.setText(" ");
+        choice4.setText("    ");
+
+    }
+
+    public void enemy5_die()
+    {
+        position = "enemy5 defeated";
+        mainTextArea.setText("You have defeated the enemy!");
+        choice1.setText("go to the Final- Bosss fight");
+        choice2.setText("  ");
+        choice3.setText(" ");
+        choice4.setText("    ");
+
     }
 
 
@@ -354,6 +413,7 @@ public class testGame4 {
     //Class that handles the rest of the game choices
     public class ChoiceHandler implements ActionListener
     {
+        enemy1 enemy_now1;
         public void actionPerformed(ActionEvent event)
         {
             String yourChoice = event.getActionCommand(); // if c1 is clicked, then c1 will be putted in yourChoice
@@ -404,6 +464,7 @@ public class testGame4 {
                     {
                         case "c1" : Scene7(); break;
                         case "c2" : Scene8(); break;
+                        case "c3" : enemy1_die(); break;
                     }break;
 
                 case "Scene 4" :
@@ -411,12 +472,14 @@ public class testGame4 {
                     {
                         case "c1" : Scene9(); break;
                         case "c2" : Scene10(); break;
+                        case "c3" : enemy2_die(); break;
                     }break;
                 case "Scene 5" :
                     switch (yourChoice)
                     {
                         case "c1" : Scene11(); break;
                         case "c2" : Scene12(); break;
+                        case "c3" : enemy3_die(); break;
                     }break;
                 case "Scene 6" :
                     switch (yourChoice)
@@ -428,6 +491,7 @@ public class testGame4 {
                     switch (yourChoice)
                     {
                         case "c1" : finalBoss(); break;
+                        case "c2" : enemy4_die(); break;
                     }break;
                 case "Scene 8" :
                     switch (yourChoice)
@@ -453,6 +517,7 @@ public class testGame4 {
                     switch (yourChoice)
                     {
                         case "c1" : finalBoss(); break;
+                        case "c2" : enemy5_die(); break;
                     }break;
                 case "Scene 13" :
                     switch (yourChoice)
@@ -464,7 +529,36 @@ public class testGame4 {
 //                    {
 //                        case "c1" : finalBoss(); break;
 //                    }break;
+                case "enemy1 defeated" :
+                    switch (yourChoice)
+                    {
+                        case "c1" : Scene7(); break;
+                        case "c2" : Scene8(); break;
+                    } break;
+                case "enemy2 defeated" :
+                    switch(yourChoice)
+                {
+                    case "c1" : Scene9(); break;
+                    case "c2 ": Scene10(); break;
+                }break;
+                case "enemy3 defeated" :
+                    switch(yourChoice)
+                    {
+                        case "c1" : Scene11(); break;
+                        case "c2 ": Scene12(); break;
+                    }break;
+                case "enemy4 defeated" :
+                    switch (yourChoice)
+                    {
+                        case "c1" : finalBoss(); break;
+                    }break;
+                case "enemy5 defeated" :
+                    switch (yourChoice)
+                    {
+                        case "c1" : finalBoss(); break;
+                    }break;
             }
+
         }
     }
 
